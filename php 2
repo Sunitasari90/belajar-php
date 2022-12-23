@@ -1,0 +1,107 @@
+$ nama = " Lasa ";
+/* <Pengulangan */
+
+/*
+$tidak = 10;
+untuk ($i=0; $i<$tidak; $i++) {
+    $n = $i + 1;
+    echo $n." ".$nama."<br/>";
+}
+*/
+
+/*
+$tidak = 10;
+$i = 0;
+sementara ($i < $tidak) {
+    $n = $i + 1;
+    echo $n." ".$nama."<br/>";
+    $i++;
+}
+*/
+
+/*
+$tidak = 10;
+$i = 0;
+melakukan {
+    $n = $i + 1;
+    echo $n." ".$nama."<br/>";
+    $i++;
+} while ($i < $tidak)
+*/
+
+/*
+$data = array('Honda', 'Yamaha', 'Suzuki', 'Mitsubishi', 'Kawasaki', 'Toyota');
+gema $data[5];
+foreach($data sebagai $nilai) {
+    echo $nilai."<br>";
+}
+*/
+
+// PERCABANGAN
+/*
+if ($nama == "nita") {
+    echo $nama." adalah orang tegal";
+} else if($nama == "princesse") {
+    echo $nama."julukan untuk orang cantik";
+} kalau tidak {
+    gema $nama. "dari mana ya?";
+}
+*/
+
+/*
+beralih($nama) {
+    kasus "nita":
+        $pesan = $nama." adalah orang tegal";
+    merusak;
+    kasus "princesse":
+        $pesan = $nama."berawal dari wajah cantik";
+    merusak;
+    bawaan:
+        $pesan = $nama." darimana ya?";
+}
+gema $pesan;
+*/
+
+?>
+
+<!DOCTYPE html >
+< html  lang =" en " >
+< kepala >
+    < meta  charset =" UTF-8 " >
+    < meta  http-equiv =" Kompatibel dengan X-UA " konten =" IE=edge " >
+    < meta  name =" viewport " content =" width=device-width, initial-scale=1.0 " >
+    < judul > Dokumen </ judul >
+</ kepala >
+< tubuh >
+    < h1 > Masukkan Nama dan Diulang </ h1 >
+    < form  action =" <?php  $ _SERVER [ 'PHP_SELF' ] ?> " method =" post " >
+        < label > Nama </ label >
+        < input  type =" text " nama =" nama " >
+        < label > Jumlah </ label >
+        < tipe input  =" teks " nama =" no " >
+        < input  type =" submit " name =" submit " value =" Submit " >
+    </ bentuk >
+    <?php
+        if (!kosong( $ _POST [ 'kirim' ])) {
+            beralih ( $ _POST [ 'nama' ]) {
+                kasus " nita ":
+                    $ pesan = $ _POST [ 'nama' ]." adalah orang tegal";
+                istirahat ;
+                kasus " princesse ":
+                    $ pesan = $ _POST [ 'nama' ]." berawal dari wajah cantik ";
+                istirahat ;
+                bawaan :
+                    $ pesan = $ _POST [ 'nama' ]." darimana ya? ";
+            }
+            
+            untuk ( $ i = 0 ; $ i < $ _POST [ 'tidak' ]; $ i ++) {
+                echo  $ pesan ." <br> ";
+            }
+
+        } lain {
+            echo " Anda belum memasukkan nama dan jumlah ";
+        }
+    ?>
+
+</ tubuh >
+</ html >
